@@ -1,0 +1,215 @@
+{
+  "tool": {
+    "id": "escala-de-hoehn-e-yahr",
+    "title": "Escala de Hoehn e Yahr",
+    "short": "Estadiamento da doença de Parkinson",
+    "spec": [
+      "neurologia",
+      "geriatria",
+      "medicina-fisica-e-reabilitacao"
+    ],
+    "desc": "Escala de Hoehn e Yahr: estadiamento da doença de Parkinson de 1 (unilateral) a 5 (cadeira de rodas ou leito), pela lateralidade e pelo equilíbrio.",
+    "lead": "Estadia a doença de Parkinson pela extensão dos sintomas motores e pela presença de instabilidade postural.",
+    "fields": [
+      [
+        "estagio",
+        "Quadro atual",
+        "sel",
+        {
+          "opts": {
+            "1": "1 – Doença unilateral",
+            "2": "2 – Doença bilateral, sem prejuízo do equilíbrio",
+            "3": "3 – Doença bilateral leve a moderada, com alguma instabilidade postural; fisicamente independente",
+            "4": "4 – Incapacidade grave; ainda consegue andar ou ficar de pé sem ajuda",
+            "5": "5 – Preso à cadeira de rodas ou ao leito, a menos que ajudado"
+          }
+        }
+      ]
+    ],
+    "score": {
+      "label": "Estágio de Hoehn e Yahr",
+      "unit": "de 5",
+      "bands": [
+        [
+          1,
+          "low",
+          "Estágio 1: doença unilateral",
+          ""
+        ],
+        [
+          2,
+          "low",
+          "Estágio 2: bilateral, sem alteração do equilíbrio",
+          ""
+        ],
+        [
+          3,
+          "mid",
+          "Estágio 3: instabilidade postural, ainda independente",
+          "A instabilidade postural marca a transição para risco de quedas: indique fisioterapia com treino de equilíbrio."
+        ],
+        [
+          4,
+          "high",
+          "Estágio 4: incapacidade grave",
+          ""
+        ],
+        [
+          5,
+          "high",
+          "Estágio 5: restrito à cadeira de rodas ou ao leito",
+          ""
+        ]
+      ]
+    },
+    "formula": "<p>Escolha o estágio que descreve o paciente. O equilíbrio é avaliado pelo <strong>teste do puxão</strong> (pull test): o examinador puxa o paciente para trás pelos ombros; mais de dois passos de recuperação ou queda indicam instabilidade postural.</p>",
+    "table": [
+      [
+        "Estágio",
+        "Descrição"
+      ],
+      [
+        "1",
+        "Unilateral"
+      ],
+      [
+        "2",
+        "Bilateral, sem prejuízo do equilíbrio"
+      ],
+      [
+        "3",
+        "Bilateral com instabilidade postural; independente"
+      ],
+      [
+        "4",
+        "Incapacidade grave; anda ou fica de pé sem ajuda"
+      ],
+      [
+        "5",
+        "Cadeira de rodas ou leito"
+      ]
+    ],
+    "tips": [
+      "A força-tarefa da Movement Disorder Society recomenda a escala original de 5 estágios; os estágios 1,5 e 2,5 da versão modificada não foram validados.",
+      "Registre se o paciente está em <strong>“on” ou “off”</strong> da levodopa: o estágio pode mudar muito entre os dois estados.",
+      "A escala resume a gravidade motora, mas ignora sintomas não motores (cognição, disautonomia, humor); para acompanhamento detalhado use a MDS-UPDRS.",
+      "O estágio 3 é marco clínico importante: quedas passam a ser o principal risco e a reabilitação deve focar marcha e equilíbrio."
+    ],
+    "sources": [
+      [
+        "Hoehn MM, Yahr MD. Parkinsonism: onset, progression and mortality. Neurology, 1967.",
+        "https://doi.org/10.1212/WNL.17.5.427"
+      ],
+      [
+        "Goetz CG et al. Movement Disorder Society Task Force report on the Hoehn and Yahr staging scale: status and recommendations. The Movement Disorder Society Task Force on rating scales for Parkinson's disease. Mov Disord, 2004.",
+        "https://doi.org/10.1002/mds.20213"
+      ]
+    ],
+    "cases": [
+      [
+        "Tremor e rigidez só à direita: estágio 1",
+        {
+          "estagio": "1"
+        },
+        {
+          "score": 1,
+          "level": "low"
+        }
+      ],
+      [
+        "Bilateral com teste do puxão alterado, independente: estágio 3",
+        {
+          "estagio": "3"
+        },
+        {
+          "score": 3,
+          "level": "mid"
+        }
+      ],
+      [
+        "Acamado: estágio 5",
+        {
+          "estagio": "5"
+        },
+        {
+          "score": 5,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "neuro-mente",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 5",
+      "label": "Estágio de Hoehn e Yahr",
+      "fields": [
+        [
+          "estagio",
+          "sel",
+          0
+        ]
+      ],
+      "bands": [
+        [
+          1,
+          "low",
+          "Estágio 1: doença unilateral",
+          ""
+        ],
+        [
+          2,
+          "low",
+          "Estágio 2: bilateral, sem alteração do equilíbrio",
+          ""
+        ],
+        [
+          3,
+          "mid",
+          "Estágio 3: instabilidade postural, ainda independente",
+          "A instabilidade postural marca a transição para risco de quedas: indique fisioterapia com treino de equilíbrio."
+        ],
+        [
+          4,
+          "high",
+          "Estágio 4: incapacidade grave",
+          ""
+        ],
+        [
+          5,
+          "high",
+          "Estágio 5: restrito à cadeira de rodas ou ao leito",
+          ""
+        ]
+      ]
+    },
+    "areaId": "neuro-mente",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/neuro-mente.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/neuro-mente.php",
+    "sha256": "3ce3a7987a3ec63938e5f21d8d24ec7f7f8880c1b54458ef7046807a89221cac",
+    "bytes": 102818
+  },
+  "clinicalValidation": "not-performed"
+}

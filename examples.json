@@ -1,0 +1,44 @@
+[
+  {
+    "label": "Tremor e rigidez só à direita: estágio 1",
+    "input": {
+      "estagio": "1"
+    },
+    "expected": {
+      "score": 1,
+      "level": "low"
+    },
+    "originalInput": {
+      "estagio": "1"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Bilateral com teste do puxão alterado, independente: estágio 3",
+    "input": {
+      "estagio": "3"
+    },
+    "expected": {
+      "score": 3,
+      "level": "mid"
+    },
+    "originalInput": {
+      "estagio": "3"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Acamado: estágio 5",
+    "input": {
+      "estagio": "5"
+    },
+    "expected": {
+      "score": 5,
+      "level": "high"
+    },
+    "originalInput": {
+      "estagio": "5"
+    },
+    "expandedZeroOptions": []
+  }
+]
