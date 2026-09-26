@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-escala-de-hoehn-e-yahr · Elucenia · https://github.com/Elucenia/tool-escala-de-hoehn-e-yahr
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escala-de-hoehn-e-yahr","title":"Escala de Hoehn e Yahr","fields":[["estagio","Quadro atual","sel",{"opts":{"1":"1 – Doença unilateral","2":"2 – Doença bilateral, sem prejuízo do equilíbrio","3":"3 – Doença bilateral leve a moderada, com alguma instabilidade postural; fisicamente independente","4":"4 – Incapacidade grave; ainda consegue andar ou ficar de pé sem ajuda","5":"5 – Preso à cadeira de rodas ou ao leito, a menos que ajudado"}}]],"config":{"unit":"de 5","label":"Estágio de Hoehn e Yahr","fields":[["estagio","sel",0]],"bands":[[1,"low","Estágio 1: doença unilateral",""],[2,"low","Estágio 2: bilateral, sem alteração do equilíbrio",""],[3,"mid","Estágio 3: instabilidade postural, ainda independente","A instabilidade postural marca a transição para risco de quedas: indique fisioterapia com treino de equilíbrio."],[4,"high","Estágio 4: incapacidade grave",""],[5,"high","Estágio 5: restrito à cadeira de rodas ou ao leito",""]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
